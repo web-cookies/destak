@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --orange-primary: #e06e00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,76 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Animações para efeito de tinta */
+@keyframes paint-drip {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes paint-flow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-paint-drip {
+  animation: paint-drip 8s ease-in-out infinite;
+}
+
+.animate-paint-flow {
+  animation: paint-flow 6s ease-in-out infinite;
+}
+
+/* Cor laranja customizada para links */
+.hover-underline-orange {
+  text-decoration: none;
+  position: relative;
+}
+
+.hover-underline-orange:hover {
+  text-decoration: none;
+}
+
+.hover-underline-orange:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #e06e00;
+  animation: underline-appear 0.1s ease-out;
+}
+
+@keyframes underline-appear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Esconder scrollbar mas manter funcionalidade */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

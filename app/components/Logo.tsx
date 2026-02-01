@@ -10,16 +10,15 @@ export default function Logo() {
     <div className="flex items-center">
       {!logoError && (
         <Image
-          src="/images/logo.png"
+          src="/images/logo.svg"
           alt="Logo Destak"
           width={150}
-          height={50}
-          className="h-12 w-auto mr-3"
+          height={100}
+          className="h-16 w-auto mr-3"
           onError={() => setLogoError(true)}
           priority
         />
       )}
-      <span className="text-2xl font-bold text-blue-600">Destak</span>
     </div>
   );
 }
