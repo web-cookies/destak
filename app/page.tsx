@@ -22,7 +22,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative overflow-hidden text-white py-20 pt-32" style={{ background: 'linear-gradient(to bottom right, #3a64ff, #2d4fcc, #1e3a99)' }}>
+      <section id="inicio" className="relative overflow-hidden text-white py-20 pt-28 mt-24" style={{ background: 'linear-gradient(to bottom right, #3a64ff, #2d4fcc, #1e3a99)' }}>
         {/* Efeitos de tinta - Hero: Gotas grandes e ondas suaves */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Gotas de tinta grandes em posições variadas */}

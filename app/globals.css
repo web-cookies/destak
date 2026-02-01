@@ -15,6 +15,11 @@
   }
 }
 
+html {
+  scroll-padding-top: 96px; /* Compensa a altura do header fixo */
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
