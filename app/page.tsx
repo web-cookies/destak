@@ -1,4 +1,4 @@
-import Logo from "./components/Logo";
+import Header from "./components/Header";
 import GalleryCarousel from "./components/GalleryCarousel";
 import ContactForm from "./components/ContactForm";
 
@@ -8,18 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Logo />
-          <ul className="flex gap-6 font-poppins">
-            <li><a href="#inicio" className="text-black hover-underline-orange">Início</a></li>
-            <li><a href="#servicos" className="text-black hover-underline-orange">Serviços</a></li>
-            <li><a href="#sobre" className="text-black hover-underline-orange">Sobre</a></li>
-            <li><a href="#galeria" className="text-black hover-underline-orange">Galeria</a></li>
-            <li><a href="#contato" className="text-black hover-underline-orange">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section id="inicio" className="relative overflow-hidden text-white py-20 pt-28 mt-24" style={{ background: 'linear-gradient(to bottom right, #3a64ff, #2d4fcc, #1e3a99)' }}>
