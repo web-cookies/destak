@@ -1,5 +1,6 @@
 import Logo from "./components/Logo";
 import GalleryCarousel from "./components/GalleryCarousel";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   // Array com as imagens da galeria
@@ -286,11 +287,13 @@ export default function Home() {
         {/* Conteúdo */}
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl font-bold text-center mb-12 drop-shadow-lg">Entre em Contato</h2>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            {/* Informações de Contato */}
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 drop-shadow-md">Informações</h3>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 drop-shadow-md">📞 Telefone</h3>
+                  <h4 className="text-xl font-semibold mb-2 drop-shadow-md">📞 Telefone</h4>
                   <div className="flex items-center gap-3 flex-wrap">
                     <a 
                       href="https://wa.me/5534996507784" 
@@ -307,18 +310,24 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 drop-shadow-md">📧 Email</h3>
+                  <h4 className="text-xl font-semibold mb-2 drop-shadow-md">📧 Email</h4>
                   <p className="text-white/90 drop-shadow-sm">destak.ofc@gmail.com</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 drop-shadow-md">📍 Endereço</h3>
+                  <h4 className="text-xl font-semibold mb-2 drop-shadow-md">📍 Endereço</h4>
                   <p className="text-white/90 drop-shadow-sm">Uberlândia, Minas Gerais</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 drop-shadow-md">🕒 Horário de Atendimento</h3>
+                  <h4 className="text-xl font-semibold mb-2 drop-shadow-md">🕒 Horário de Atendimento</h4>
                   <p className="text-white/90 drop-shadow-sm">Segunda a Sábado: 7h às 18h</p>
                 </div>
               </div>
+            </div>
+
+            {/* Formulário de Contato */}
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 drop-shadow-md">Envie sua Mensagem</h3>
+              <ContactForm />
             </div>
           </div>
         </div>
