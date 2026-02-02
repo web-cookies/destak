@@ -162,14 +162,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="galeria" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-black">Galeria de Trabalhos</h2>
-          <GalleryCarousel images={galleryImages} />
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="sobre" className="relative overflow-hidden text-white py-20" style={{ background: 'linear-gradient(to bottom right, #e06e00, #cc6300, #b85800)' }}>
         {/* Efeitos de tinta - Sobre: Gotas menores e formas elípticas */}
@@ -217,6 +209,14 @@ export default function Home() {
               soluções completas em drywall e pintura, sempre com qualidade superior e acabamento impecável.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section id="galeria" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-black">Galeria de Trabalhos</h2>
+          <GalleryCarousel images={galleryImages} />
         </div>
       </section>
 

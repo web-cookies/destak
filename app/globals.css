@@ -8,21 +8,15 @@
   --orange-primary: #e06e00;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html {
   scroll-padding-top: 96px; /* Compensa a altura do header fixo */
   scroll-behavior: smooth;
+  background: #ffffff;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
