@@ -5,8 +5,88 @@ import ContactForm from "./components/ContactForm";
 export default function Home() {
   // Array com as imagens da galeria
   const galleryImages = Array.from({ length: 25 }, (_, i) => `/images/gallery/image-${i + 1}.jpeg`);
+  
+  // Structured Data (JSON-LD) para SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Destak - Pinturas e Gesso",
+    "image": "https://destakmg.com.br/images/logo.svg",
+    "description": "Serviços profissionais de pintura residencial e comercial, drywall, cimento queimado, texturas, papel de parede, forros, sancas, molduras e boisserie em Uberlândia, MG.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Uberlândia",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "telephone": "+5534996507784",
+    "email": "destak.ofc@gmail.com",
+    "url": "https://destakmg.com.br",
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Uberlândia"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Pintura e Drywall",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pintura Residencial e Comercial"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Drywall - Paredes, Forros, Sancas e Molduras"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cimento Queimado"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Texturas em Geral"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aplicação de Papel de Parede"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Boisserie"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://wa.me/5534996507784"
+    ]
+  };
+
   return (
     <div className="min-h-screen">
+      {/* Structured Data para SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <Header />
 
