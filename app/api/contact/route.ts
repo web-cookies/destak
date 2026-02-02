@@ -50,8 +50,9 @@ Data: ${new Date().toLocaleString("pt-BR")}
     `;
 
     // Enviar email usando Resend
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "contato@destakmg.com.br";
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+      from: `Destak Website <${fromEmail}>`,
       to: "destak.ofc@gmail.com",
       replyTo: email,
       subject: `Nova mensagem de ${name} - Site Destak`,
